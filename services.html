@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Premium Tiers | PACS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Symmetric Layout for Tier Blocks */
+        .tiers-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        /* Top Row: 3 Columns */
+        .tiers-top-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        /* Bottom Row: 2 Columns centered */
+        .tiers-bottom-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Terms & Protections Grid */
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .terms-card {
+            background: #FFFFFF;
+            border: 1px solid var(--glass-border);
+            padding: 25px;
+            border-radius: 14px;
+        }
+
+        @media (max-width: 992px) {
+            .tiers-top-row, .tiers-bottom-row, .terms-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Premium Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <span class="brand-text">P A C S</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active">Services & Tiers</a>
+                <a href="about.html">About Directorate</a>
+                <a href="contact.html" class="nav-cta">Evaluate Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="luxury-section" style="padding-top: 140px; padding-bottom: 40px; background: linear-gradient(135deg, #FFFDF9 0%, #F5EFE2 100%);">
+        <div class="section-container">
+            <span class="section-tag">Strategic Execution</span>
+            <h2 class="section-title">Admission Architecture Tiers</h2>
+            <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+                Every academic journey is structured with meticulous precision. Select the specialized advisory tier aligned with your current preparation progress.
+            </p>
+        </div>
+    </section>
+
+    <!-- 5-Tier Symmetric Layout Section -->
+    <section class="luxury-section" style="padding-top: 40px; padding-bottom: 40px;">
+        <div class="section-container">
+            <div class="tiers-container">
+                
+                <!-- TOP ROW: 3 ITEMS -->
+                <div class="tiers-top-row">
+                    <!-- Tier 1: Germany Study Consultation -->
+                    <div class="matrix-card">
+                        <span style="font-size: 1.5rem; margin-bottom: 10px; display: block;">🟢</span>
+                        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-dark);">Germany Study Consultation</h3>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 5px; min-height: 45px;">
+                            Perfect for students who need the right direction before starting their Germany study journey.
+                        </p>
+                        <div class="price-display">
+                            <span class="strike-price">€35</span>
+                            <span class="live-price">€25</span>
+                        </div>
+                        <ul class="matrix-features">
+                            <li>✓ Germany study consultation</li>
+                            <li>✓ Eligibility assessment</li>
+                            <li>✓ Personalized study roadmap</li>
+                            <li>✓ Basic university guidance</li>
+                            <li>✓ Dedicated Q&A session</li>
+                        </ul>
+                        <a href="contact.html?tier=consultation" class="btn btn-outline" style="width: 100%; padding: 12px;">Secure Entry Tier</a>
+                    </div>
+
+                    <!-- Tier 2: Germany Study Planning -->
+                    <div class="matrix-card">
+                        <span style="font-size: 1.5rem; margin-bottom: 10px; display: block;">🔵</span>
+                        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-dark);">Germany Study Planning</h3>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 5px; min-height: 45px;">
+                            For students who want a clear and organized Germany application strategy.
+                        </p>
+                        <div class="price-display">
+                            <span class="strike-price">€75</span>
+                            <span class="live-price">€50</span>
+                        </div>
+                        <ul class="matrix-features">
+                            <li>✓ Personalized Germany study plan</li>
+                            <li>✓ Curated university shortlist</li>
+                            <li>✓ Application timeline</li>
+                            <li>✓ Required document checklist</li>
+                            <li>✓ Budget planning guidance</li>
+                        </ul>
+                        <a href="contact.html?tier=planning" class="btn btn-outline" style="width: 100%; padding: 12px;">Secure Planning Tier</a>
+                    </div>
+
+                    <!-- Tier 3: Guided Application Support -->
+                    <div class="matrix-card elite-highlight">
+                        <span class="popular-badge">⭐ Most Popular</span>
+                        <span style="font-size: 1.5rem; margin-bottom: 10px; display: block;">🟠</span>
+                        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-dark);">Guided Application Support</h3>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 5px; min-height: 45px;">
+                            Our most popular package for students who want expert guidance throughout their preparation.
+                        </p>
+                        <div class="price-display">
+                            <span class="strike-price">€375</span>
+                            <span class="live-price">€250</span>
+                        </div>
+                        <ul class="matrix-features">
+                            <li>✓ <strong>Everything in Study Planning</strong></li>
+                            <li>✓ Statement of Purpose (SOP) review</li>
+                            <li>✓ Curriculum Vitae (CV) review</li>
+                            <li>✓ University selection support</li>
+                            <li>✓ Application guidance</li>
+                            <li>✓ Visa document checklist</li>
+                            <li>✓ On-demand WhatsApp support</li>
+                        </ul>
+                        <a href="contact.html?tier=guided" class="btn btn-gold" style="width: 100%; padding: 12px;">Secure Guided Access</a>
+                    </div>
+                </div>
+
+                <!-- BOTTOM ROW: 2 ITEMS CENTERED -->
+                <div class="tiers-bottom-row">
+                    <!-- Tier 4: Complete A-Z Application Support -->
+                    <div class="matrix-card">
+                        <span style="font-size: 1.5rem; margin-bottom: 10px; display: block;">🔴</span>
+                        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-dark);">Complete A–Z Support</h3>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 5px; min-height: 45px;">
+                            Comprehensive support from planning through application and visa preparation.
+                        </p>
+                        <div class="price-display">
+                            <span class="strike-price">€750</span>
+                            <span class="live-price">€500</span>
+                        </div>
+                        <ul class="matrix-features">
+                            <li>✓ <strong>Everything in Guided Support</strong></li>
+                            <li>✓ University application submissions</li>
+                            <li>✓ SOP & CV final optimization review</li>
+                            <li>✓ Complete document portfolio review</li>
+                            <li>✓ Comprehensive visa preparation</li>
+                            <li>✓ National visa appointment guidance</li>
+                            <li>✓ Simulated interview stress-tests</li>
+                            <li>✓ Pre-departure orientation briefings</li>
+                        </ul>
+                        <a href="contact.html?tier=complete" class="btn btn-outline" style="width: 100%; padding: 12px;">Secure Elite Tier</a>
+                    </div>
+
+                    <!-- Tier 5: Premium Germany Care -->
+                    <div class="matrix-card" style="border: 1px dashed var(--gold); background-color: rgba(250, 248, 245, 0.7);">
+                        <span class="popular-badge" style="background: var(--text-dark);">💎 Upcoming Elite</span>
+                        <span style="font-size: 1.5rem; margin-bottom: 10px; display: block;">👑</span>
+                        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-dark);">Premium Germany Care</h3>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 5px; min-height: 45px;">
+                            Our most comprehensive package, providing dedicated support before and after your arrival in Germany.
+                        </p>
+                        <div class="price-display">
+                            <span class="strike-price">€1,500</span>
+                            <span class="live-price">€1,000</span>
+                        </div>
+                        <ul class="matrix-features">
+                            <li>✓ <strong>Everything in Complete A-Z Support</strong></li>
+                            <li>✓ Airport pickup concierge assistance*</li>
+                            <li>✓ Relocation and accommodation guidance</li>
+                            <li>✓ German local SIM card setup guidance</li>
+                            <li>✓ Premium German bank account registration</li>
+                            <li>✓ City registration (Anmeldung) guidance</li>
+                            <li>✓ Direct settling-in support on-the-ground</li>
+                        </ul>
+                        <button class="btn btn-outline" style="width: 100%; padding: 12px; border: 1px dashed var(--text-muted); color: var(--text-muted); cursor: not-allowed;" disabled>Coming Soon</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Terms & Protections Section -->
+    <section class="luxury-section" style="background-color: #FFFFFF; padding-top: 60px;">
+        <div class="section-container" style="max-width: 1000px;">
+            <span class="section-tag">Financial Architecture</span>
+            <h2 class="section-title">Terms of Engagement & Trust Assurances</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 700px; margin: 0 auto;">
+                We align our commercial terms directly with your peace of mind, offering unmatched processing safety and complete structural flexibility.
+            </p>
+
+            <div class="terms-grid">
+                <!-- Protection 1: 50/50 Milestones -->
+                <div class="terms-card">
+                    <h4 style="font-weight: 800; color: var(--text-dark); margin-bottom: 8px;">💳 Balanced 50/50 Payment Structure</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                        Retain complete operational control. You cover exactly <strong>50% of the selected tier fee before onboarding and workflow activation</strong>, and the remaining <strong>50% only after your formal institutional offer letter is issued</strong>.
+                    </p>
+                </div>
+                
+                <!-- Protection 2: Risk-Mitigated Refund -->
+                <div class="terms-card">
+                    <h4 style="font-weight: 800; color: var(--text-dark); margin-bottom: 8px;">🛡️ 10% Structural Deficit Refund</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                        We share the risk of your journey. In the highly improbable event that we fail to secure your university offer letter, PACS directly issues a <strong>10% refund of the initial 50% deposit</strong> paid to protect your investment.
+                    </p>
+                </div>
+
+                <!-- Protection 3: Unlimited Applications -->
+                <div class="terms-card">
+                    <h4 style="font-weight: 800; color: var(--text-dark); margin-bottom: 8px;">📈 Unlimited Multi-Institutional Submissions</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                        We do not cap your future. There are no restrictive university limits—we will strategically engineer submissions and apply to <strong>as many matching programs as required</strong> to maximize your entry security.
+                    </p>
+                </div>
+
+                <!-- Protection 4: Application Fees Handling -->
+                <div class="terms-card">
+                    <h4 style="font-weight: 800; color: var(--text-dark); margin-bottom: 8px;">⚖️ Institutional Fee Management</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                        Standard institutional application and processing fees (e.g., uni-assist) are handled by the student. However, for minor administrative costs, <strong>PACS will occasionally step in to fully cover the amount</strong> to keep your processing frictionless.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Footer -->
+    <footer class="luxury-footer">
+        <p>&copy; 2026 PACS (Premium Academic Consultancy Services). Engineered for absolute precision.</p>
+        <p style="font-size: 0.8rem; margin-top: 8px; color: #94A3B8;">Official Inquiries: Info@pacsedu.org | Hotlines Powered Direct via WhatsApp Routing.</p>
+    </footer>
+
+    <script src="whatsapp-widget.js"></script>
+</body>
+</html>

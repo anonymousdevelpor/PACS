@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Directorate | PACS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            text-align: left;
+            margin-top: 50px;
+        }
+
+        .director-card {
+            background: #FFFFFF;
+            border: 2px solid var(--gold);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(230, 161, 25, 0.05);
+            text-align: left;
+        }
+
+        .director-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold-dark);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .director-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .director-role {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--bg-main);
+            padding-bottom: 15px;
+        }
+
+        .quote-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            font-style: italic;
+            position: relative;
+        }
+
+        .quote-text::before {
+            content: "“";
+            font-size: 4rem;
+            color: rgba(230, 161, 25, 0.15);
+            position: absolute;
+            top: -30px;
+            left: -20px;
+            font-family: serif;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+            text-align: left;
+        }
+
+        .value-card {
+            background: #FFFFFF;
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 14px;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Premium Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <span class="brand-text">P A C S</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services & Tiers</a>
+                <a href="about.html" class="active">About Directorate</a>
+                <a href="contact.html" class="nav-cta">Evaluate Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Executive Header Section -->
+    <section class="luxury-section" style="padding-top: 140px; padding-bottom: 40px; background: linear-gradient(135deg, #FFFDF9 0%, #F5EFE2 100%);">
+        <div class="section-container">
+            <span class="section-tag">Academic Authority</span>
+            <h2 class="section-title">The Strategic Mindset Behind PACS</h2>
+            <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+                Providing elite, high-integrity educational advisory services designed to navigate complex German university selection algorithms and accreditation policies[cite: 1, 3, 4].
+            </p>
+        </div>
+    </section>
+
+    <!-- Executive Directorate & Philosophy Grid -->
+    <section class="luxury-section" style="padding-top: 40px; padding-bottom: 60px;">
+        <div class="section-container">
+            <div class="about-grid">
+                
+                <!-- Left Column: Corporate Philosophy -->
+                <div>
+                    <span class="premium-badge">Corporate Philosophy</span>
+                    <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 20px; color: var(--text-dark);">Why We Build Partnerships, Not Transactions</h3>
+                    <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 20px; line-height: 1.7;">
+                        Most educational consultancies focus on high volume and processing transactions[cite: 1]. At PACS, we operate as a boutique executive agency[cite: 1]. We believe that every student's dream is too valuable to be treated like a simple number on a spreadsheet.
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+                        Our mission is to combine math and high-level strategy to map student qualifications directly to Germany's exact academic requirements[cite: 3, 4]. By managing your application process meticulously, we bypass standard human application errors to open doors to the finest public institutions[cite: 3].
+                    </p>
+                </div>
+
+                <!-- Right Column: Director Profile -->
+                <div class="director-card">
+                    <div class="director-title">Executive Directorate</div>[cite: 1]
+                    <div class="director-name">Ali Irtaza</div>[cite: 1]
+                    <div class="director-role">Founder & Principal Career Advisor, PACS</div>[cite: 1]
+                    <div class="quote-text">
+                        "Our advisory architecture does not merely consult—it systematically validates[cite: 1]. We realign academic records to clear technical entry barriers, transforming admissions from a game of chance into a predictable science[cite: 1]. Beyond strategy, we believe that genuine human connections matter more than financial transactions[cite: 1]. Every student is more than an application; every journey is a long-term partnership built on trust, integrity, and an unwavering commitment to lasting success[cite: 1]."
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Core Values Section -->
+    <section class="luxury-section" style="background-color: #FFFFFF; padding-top: 60px;">
+        <div class="section-container">
+            <span class="section-tag">Core Tenets</span>
+            <h2 class="section-title">Our Operational Standards</h2>
+            
+            <div class="values-grid">
+                <!-- Value 1 -->
+                <div class="value-card">
+                    <h4 style="font-weight: 800; color: var(--text-dark); margin-bottom: 10px; font-size: 1.15rem;">📐 Absolute Technical Precision</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                        We calculate and analyze using authentic German frameworks, avoiding standard administrative errors that cause applications to be rejected[cite: 3].
+                    </p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="value-card">
+                    <h4 style="font-weight: 800; color: var(--text-dark); margin-bottom: 10px; font-size: 1.15rem;">🤝 High-Integrity Partnerships</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                        Our student partnerships are built entirely on direct transparency, milestone-based security, and shared accountability[cite: 1].
+                    </p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="value-card">
+                    <h4 style="font-weight: 800; color: var(--text-dark); margin-bottom: 10px; font-size: 1.15rem;">🌍 Equitable Access</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                        We bridge the gap for global scholars to successfully enter Germany's free, world-renowned public university system[cite: 3].
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Footer -->
+    <footer class="luxury-footer">
+        <p>&copy; 2026 PACS (Premium Academic Consultancy Services). Engineered for absolute precision.</p>
+        <p style="font-size: 0.8rem; margin-top: 8px; color: #94A3B8;">Official Inquiries: Info@pacsedu.org | Hotlines Powered Direct via WhatsApp Routing.</p>
+    </footer>
+
+    <script src="whatsapp-widget.js"></script>
+</body>
+</html>

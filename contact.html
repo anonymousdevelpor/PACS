@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Assessment Portal | PACS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .portal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .info-sidebar {
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            color: #FFFFFF;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .portal-form {
+            background: #FFFFFF;
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(230, 161, 25, 0.15);
+        }
+
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 992px) {
+            .portal-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .form-grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Premium Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <span class="brand-text">P A C S</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services & Tiers</a>
+                <a href="about.html">About Directorate</a>
+                <a href="contact.html" class="active">Evaluate Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="luxury-section" style="padding-top: 140px; padding-bottom: 80px;">
+        <div class="section-container">
+            <span class="section-tag">Direct Intake</span>
+            <h2 class="section-title">Initiate Your Profile Evaluation</h2>
+            
+            <div class="portal-grid">
+                
+                <!-- Left Column: Guidelines & Authority -->
+                <div class="info-sidebar">
+                    <h3 style="color: var(--gold); font-size: 1.8rem; font-weight: 800; margin-bottom: 20px;">Verification Protocol</h3>
+                    <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 30px;">
+                        To maintain high admission success rates, all applicants go through a strict initial document review. This helps us ensure your profile meets German standards before we officially begin our partnership.
+                    </p>
+
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: #FFFFFF; font-size: 1rem; margin-bottom: 5px;">📍 Initial Verification Desk</h4>
+                        <p style="color: #94A3B8; font-size: 0.85rem;">All incoming portfolios are reviewed under the direct supervision of Founder Ali Irtaza[cite: 1].</p>
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: #FFFFFF; font-size: 1rem; margin-bottom: 5px;">⚡ Processing Speed</h4>
+                        <p style="color: #94A3B8; font-size: 0.85rem;">Expect a formal status response and pathway recommendation within 24 to 48 hours.</p>
+                    </div>
+
+                    <div>
+                        <h4 style="color: #FFFFFF; font-size: 1rem; margin-bottom: 5px;">🔒 Complete Confidentiality</h4>
+                        <p style="color: #94A3B8; font-size: 0.85rem;">Your academic credentials and personal details are fully protected and processed through secure networks.</p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Form -->
+                <div class="portal-form">
+                    <form id="pacs-contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+                        
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Primary Email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="whatsapp">WhatsApp Number (with country code)</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="+49 123 456789" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tier-select">Selected Advisory Tier</label>
+                                <select id="tier-select" name="selected_tier" class="form-control">
+                                    <option value="consultation">Tier 1: Germany Study Consultation — €25</option>
+                                    <option value="planning">Tier 2: Germany Study Planning — €50</option>
+                                    <option value="guided">Tier 3: Guided Application Support — €250</option>
+                                    <option value="complete">Tier 4: Complete A-Z Support — €500</option>
+                                    <option value="care">Tier 5: Premium Germany Care — €1,000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="cgpa">Last Earned GPA / CGPA</label>
+                                <input type="text" id="cgpa" name="cgpa" class="form-control" placeholder="e.g., 3.4/4.0 or 78%" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="degree">Target Degree Program</label>
+                                <input type="text" id="degree" name="degree" class="form-control" placeholder="e.g., MSc Data Science" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="details">Additional Academic History & Goals</label>
+                            <textarea id="details" name="academic_details" rows="4" class="form-control" placeholder="Please list your field of study, any specific German universities you are considering, and your language proficiency levels (IELTS/TOEFL or German)." required></textarea>
+                        </div>
+
+                        <!-- Formspree Honeypot Protection -->
+                        <input type="text" name="_gotcha" style="display:none">
+
+                        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">
+                            Submit Profile for Evaluation
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Footer -->
+    <footer class="luxury-footer">
+        <p>&copy; 2026 PACS (Premium Academic Consultancy Services). Engineered for absolute precision.</p>
+        <p style="font-size: 0.8rem; margin-top: 8px; color: #94A3B8;">Official Inquiries: Info@pacsedu.org | Hotlines Powered Direct via WhatsApp Routing.</p>
+    </footer>
+
+    <!-- Smart URL Tier Auto-Selector Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tier = urlParams.get('tier');
+            if (tier) {
+                const selectElement = document.getElementById('tier-select');
+                if (selectElement) {
+                    selectElement.value = tier;
+                }
+            }
+        });
+    </script>
+
+    <script src="whatsapp-widget.js"></script>
+</body>
+</html>
