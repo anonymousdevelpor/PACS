@@ -111,7 +111,7 @@ body {
 /* Hero & Layout Framework */
 .hero {
     background: linear-gradient(135deg, #FFFDF9 0%, #F5EFE2 100%);
-    padding: 130px 24px 70px 24px;
+    padding: 140px 24px 70px 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,8 +162,9 @@ h1 {
 
 .hero-buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 14px;
+    width: 100%;
 }
 
 /* Rounded Strategic Buttons */
@@ -179,6 +180,7 @@ h1 {
     text-align: center;
     border: none;
     white-space: nowrap;
+    width: 100%;
 }
 
 .btn-gold {
@@ -280,7 +282,7 @@ h1 {
 
 /* Sections & Matrices */
 .luxury-section {
-    padding: clamp(50px, 8vw, 90px) 24px;
+    padding: clamp(40px, 8vw, 90px) 16px;
 }
 
 .section-container {
@@ -308,9 +310,8 @@ h1 {
 }
 
 .pricing-matrix {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 24px;
     margin-top: 40px;
 }
 
@@ -318,7 +319,7 @@ h1 {
     background: var(--bg-surface);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
-    padding: clamp(30px, 5vw, 40px) 24px;
+    padding: clamp(25px, 5vw, 40px) 20px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 10px 30px rgba(0,0,0,0.01);
@@ -396,10 +397,25 @@ h1 {
     line-height: 1.6;
 }
 
-/* Complete Mobile & Tablet Overrides */
+/* Tablet & Mobile Media Queries */
+@media (min-width: 769px) {
+    .hero-buttons {
+        flex-direction: row;
+        width: auto;
+    }
+    .btn {
+        width: auto;
+    }
+    .pricing-matrix {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 30px;
+    }
+}
+
 @media (max-width: 992px) {
     .hero {
-        padding-top: 110px;
+        padding-top: 160px; /* Adds extra padding to clear the stacked responsive menu */
     }
     .hero-content { 
         grid-template-columns: 1fr; 
@@ -410,35 +426,35 @@ h1 {
     }
 }
 
+/* Beautiful Mobile Navigation Fixing Links Disappearance */
 @media (max-width: 768px) {
     .nav-container {
-        padding: 12px 16px;
-    }
-    /* Simple handling for dense nav items on small views */
-    .nav-links {
-        gap: 16px;
-    }
-    .nav-links a:not(.nav-cta) {
-        display: none; /* Hides internal links to protect layout unless using a toggle hamburger */
-    }
-    .hero-buttons {
         flex-direction: column;
+        padding: 12px 16px;
+        gap: 12px;
+    }
+    
+    .logo-link {
         width: 100%;
+        justify-content: center;
     }
-    .btn {
+    
+    .nav-links {
         width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 18px;
     }
-    .pricing-matrix {
-        grid-template-columns: 1fr;
-        gap: 24px;
+    
+    .nav-links a {
+        font-size: 0.85rem;
     }
-}
-
-@media (max-width: 480px) {
-    .luxury-section {
-        padding: 40px 16px;
-    }
-    .calculator-card {
-        padding: 20px 16px;
+    
+    .nav-links .nav-cta {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+        width: 100%;
+        text-align: center;
+        margin-top: 4px;
     }
 }
