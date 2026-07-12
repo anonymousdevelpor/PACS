@@ -163,23 +163,32 @@
             feedback.innerText = `Calculated German Grade: ${finalGpa}`;
             whatsappBtn.style.display = "inline-block";
 
-            // Official German System Labeling (German + English)
-            if (germanGrade <= 1.5) {
-                resultDesc.innerHTML = "🏆 Sehr gut / Very Good";
-            }
-            else if (germanGrade <= 2.5) {
-                resultDesc.innerHTML = "✨ Gut / Good";
-            }
-            else if (germanGrade <= 3.5) {
-                resultDesc.innerHTML = "📈 Befriedigend / Satisfactory";
-            }
-            else if (germanGrade <= 4.0) {
-                resultDesc.innerHTML = "📋 Ausreichend / Pass (Adequate)";
-            }
-            else {
-                resultDesc.innerHTML = "❌ Nicht bestanden / Fail";
-            }
+          // Check if grade is below minimum passing grade FIRST
+            if (Nd < Nmin) {
+    gpaDisplay.innerText = "Fail";
+    feedback.innerText = "Grade below minimum passing grade";
+    resultDesc.innerHTML = "❌ Nicht bestanden / Fail";
+    whatsappBtn.style.display = "inline-block";
+    return;
+}
 
+
+// Official German System Labeling (German + English)
+if (germanGrade <= 1.5) {
+    resultDesc.innerHTML = "🏆 Sehr gut / Very Good";
+}
+else if (germanGrade <= 2.5) {
+    resultDesc.innerHTML = "✨ Gut / Good";
+}
+else if (germanGrade <= 3.5) {
+    resultDesc.innerHTML = "📈 Befriedigend / Satisfactory";
+}
+else if (germanGrade <= 4.0) {
+    resultDesc.innerHTML = "📋 Ausreichend / Pass (Adequate)";
+}
+else {
+    resultDesc.innerHTML = "❌ Nicht bestanden / Fail";
+}
             // Update Dynamic Pre-Filled Intent Link
             whatsappBtn.onclick = function() {
                 const labelText = resultDesc.innerText;
