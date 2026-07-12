@@ -14,8 +14,8 @@
     <!-- Premium Sticky Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <span class="brand-text">P A C S</span>
+            <a href="index.html" class="logo-link" style="display: flex; align-items: center;">
+                <img src="Assets/Logo.png" alt="PACS Logo" class="brand-logo" style="height: 45px; width: auto; display: block; object-fit: contain;">
             </a>
             <div class="nav-links">
                 <a href="index.html" class="active">Home</a>
@@ -163,24 +163,24 @@
             feedback.innerText = `Calculated German Grade: ${finalGpa}`;
             whatsappBtn.style.display = "inline-block";
 
-            // Official German System Labeling (German + English)[cite: 3]
+            // Official German System Labeling (German + English)
             if (germanGrade >= 1.0 && germanGrade <= 1.5) {
-                resultDesc.innerHTML = "🏆 Sehr gut / Very Good";[cite: 3]
+                resultDesc.innerHTML = "🏆 Sehr gut / Very Good";
             } 
             else if (germanGrade >= 1.6 && germanGrade <= 2.5) {
-                resultDesc.innerHTML = "✨ Gut / Good";[cite: 3]
+                resultDesc.innerHTML = "✨ Gut / Good";
             } 
             else if (germanGrade >= 2.6 && germanGrade <= 3.5) {
-                resultDesc.innerHTML = "📈 Befriedigend / Satisfactory";[cite: 3]
+                resultDesc.innerHTML = "📈 Befriedigend / Satisfactory";
             } 
             else if (germanGrade >= 3.6 && germanGrade <= 4.0) {
-                resultDesc.innerHTML = "📋 Ausreichend / Pass (Adequate)";[cite: 3]
+                resultDesc.innerHTML = "📋 Ausreichend / Pass (Adequate)";
             } 
             else if (germanGrade > 4.0) {
-                resultDesc.innerHTML = "❌ Nicht bestanden / Fail";[cite: 3]
+                resultDesc.innerHTML = "❌ Nicht bestanden / Fail";
             } 
             else {
-                resultDesc.innerHTML = "⚠️ Invalid Grade";[cite: 3]
+                resultDesc.innerHTML = "⚠️ Invalid Grade";
             }
 
             // Update Dynamic Pre-Filled Intent Link
