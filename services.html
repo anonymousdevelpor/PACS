@@ -37,15 +37,19 @@
         }
 
         /* Terms & Protections Grid */
-        .terms-grid {
+        .terms-grid, .values-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            text-align: left;
             margin-top: 40px;
+            text-align: left;
         }
 
-        .terms-card {
+        .terms-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .terms-card, .value-card {
             background: #FFFFFF;
             border: 1px solid var(--glass-border);
             padding: 25px;
@@ -53,7 +57,7 @@
         }
 
         @media (max-width: 992px) {
-            .tiers-top-row, .tiers-bottom-row, .terms-grid {
+            .tiers-top-row, .tiers-bottom-row, .terms-grid, .values-grid {
                 grid-template-columns: 1fr;
                 max-width: 100%;
             }
@@ -65,8 +69,8 @@
     <!-- Premium Sticky Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <span class="brand-text">P A C S</span>
+            <a href="index.html" class="logo-link" style="display: flex; align-items: center;">
+                <img src="Assets/Logo.png" alt="PACS Logo" class="brand-logo" style="height: 45px; width: auto; display: block; object-fit: contain;">
             </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
@@ -217,6 +221,40 @@
         </div>
     </section>
 
+    <!-- Why Choose PACS - Strategic Advantage Section (EXCLUSIVELY HERE) -->
+    <section class="luxury-section" style="background-color: #FDFBF7; padding-top: 60px; padding-bottom: 60px; border-top: 1px solid var(--glass-border);">
+        <div class="section-container">
+            <span class="section-tag">The PACS Advantage</span>
+            <h2 class="section-title">Why Global Scholars Choose Our Directorate</h2>
+            
+            <div class="values-grid">
+                <!-- Advantage 1 -->
+                <div class="value-card" style="border-left: 3px solid var(--gold);">
+                    <h4 style="font-weight: 800; color: var(--text-dark); margin-bottom: 12px; font-size: 1.15rem;">🎯 Algorithm-Driven Precision</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                        We map your exact credit hours, syllabus descriptions, and grades against formal German university selection metrics to guarantee total compliance.
+                    </p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="value-card" style="border-left: 3px solid var(--gold);">
+                    <h4 style="font-weight: 800; color: var(--text-dark); margin-bottom: 12px; font-size: 1.15rem;">🤝 Direct Accountability</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                        Unlike mass agencies, every single tier is strictly managed by our founder. You receive close milestone tracking with zero hidden administrative fees.
+                    </p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="value-card" style="border-left: 3px solid var(--gold);">
+                    <h4 style="font-weight: 800; color: var(--text-dark); margin-bottom: 12px; font-size: 1.15rem;">🏛️ Pure Public University Focus</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                        We do not push commercial private options for payout commissions. Our entire framework is built to secure entry into tuition-free public German institutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Institutional Terms & Protections Section -->
     <section class="luxury-section" style="background-color: #FFFFFF; padding-top: 60px;">
         <div class="section-container" style="max-width: 1000px;">
@@ -265,7 +303,7 @@
     <!-- Institutional Footer -->
     <footer class="luxury-footer">
         <p>&copy; 2026 PACS (Premium Academic Consultancy Services). Engineered for absolute precision.</p>
-        <p style="font-size: 0.8rem; margin-top: 8px; color: #94A3B8;">Official Inquiries: Info@pacsedu.org | Hotlines Powered Direct via WhatsApp Routing.</p>
+        <p style="font-size: 0.8rem; margin-top: 8px; color: #94A3B8;">Official Inquiries: info@pacsedu.org / ali@pacsedu.org | Hotlines Powered Direct via WhatsApp Routing: +971581064039</p>
     </footer>
 
     <script src="whatsapp-widget.js"></script>
