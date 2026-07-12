@@ -146,12 +146,23 @@
                 return;
             }
 
-            if (Nd > Nmax || Nd < Nmin || Nmax <= Nmin) {
-                gpaDisplay.innerText = "Error";
-                resultDesc.innerHTML = "⚠️ Invalid Grade";
-                feedback.innerText = "Please verify your entry values.";
-                whatsappBtn.style.display = "none";
-                return;
+// Validate input values
+if (Nd > Nmax || Nmax <= Nmin) {
+    gpaDisplay.innerText = "Error";
+    resultDesc.innerHTML = "⚠️ Invalid Grade";
+    feedback.innerText = "Please verify your entry values.";
+    whatsappBtn.style.display = "none";
+    return;
+}
+
+// Check failing grade
+if (Nd < Nmin) {
+    gpaDisplay.innerText = "Fail";
+    resultDesc.innerHTML = "❌ Nicht bestanden / Fail";
+    feedback.innerText = "Grade below minimum passing grade.";
+    whatsappBtn.style.display = "inline-block";
+    return;
+}
             }
 
             // Authentic Bavarian Calculation: 1 + 3 * ((Nmax - Nd) / (Nmax - Nmin))
@@ -162,15 +173,6 @@
             gpaDisplay.innerText = finalGpa;
             feedback.innerText = `Calculated German Grade: ${finalGpa}`;
             whatsappBtn.style.display = "inline-block";
-
-          // Check if grade is below minimum passing grade FIRST
-            if (Nd < Nmin) {
-    gpaDisplay.innerText = "Fail";
-    feedback.innerText = "Grade below minimum passing grade";
-    resultDesc.innerHTML = "❌ Nicht bestanden / Fail";
-    whatsappBtn.style.display = "inline-block";
-    return;
-}
 
 
 // Official German System Labeling (German + English)
