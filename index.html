@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACS | Premium Academic Consultancy Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Premium Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link" style="display: flex; align-items: center;">
+                <img src="Assets/Logo.png" alt="PACS Logo" class="brand-logo" style="height: 45px; width: auto; display: block; object-fit: contain;">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services & Tiers</a>
+                <a href="about.html">About Directorate</a>
+                <a href="contact.html" class="nav-cta">Evaluate Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Asymmetric Hero & Automated Grade Engine Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-left-text">
+                <span class="premium-badge">Official Advisory Engine</span>
+                <h1>Transforming German Admissions Into A <span class="gold-text">Predictable Science</span>.</h1>
+                <p class="hero-subtitle">We clear structural barriers, optimize international academic records using the authentic Bavarian calculation framework, and engineer direct tracks into Germany's elite public institutions.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-gold">Explore 5 Service Tiers</a>
+                    <a href="about.html" class="btn btn-outline">Our Philosophy</a>
+                </div>
+            </div>
+
+            <!-- Real-Time Automatic Grade Engine Card -->
+            <div class="calculator-card" id="calculator">
+                <h3 class="calc-title">Bavarian Formula Grade Engine</h3>
+                <div class="calc-grid">
+                    <div class="calc-group">
+                        <label>Maximum Achievable Grade (Best Possible)</label>
+                        <input type="number" id="maxGrade" placeholder="e.g., 4.0 or 100" step="0.01" value="4.0">
+                    </div>
+                    <div class="calc-group">
+                        <label>Minimum Passing Grade</label>
+                        <input type="number" id="minGrade" placeholder="e.g., 2.0 or 50" step="0.01" value="2.0">
+                    </div>
+                    <div class="calc-group">
+                        <label>Your Current Obtained Grade / CGPA</label>
+                        <input type="number" id="currentGrade" placeholder="e.g., 3.45" step="0.01">
+                    </div>
+                </div>
+
+                <div class="calc-result-box">
+                    <label style="font-size: 0.75rem; font-weight: 700; color: #64748B; text-transform: uppercase; display: block; margin-bottom: 5px;">Your German Equivalent GPA</label>
+                    <div class="result-value" id="germanGpa">---</div>
+                    <div id="calcResultDesc" style="font-size: 1.1rem; font-weight: 700; margin-top: 8px; color: var(--text-dark);"></div>
+                    <p id="calcFeedback" style="font-size: 0.85rem; color: #64748B; margin-top: 10px; font-weight: 500;">Enter your scores to activate instant routing.</p>
+                    <button id="whatsappCalcBtn" class="btn btn-gold" style="width: 100%; margin-top: 15px; display: none; border-radius: 12px; padding: 12px;">Discuss This Result on WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choosing Us / Institutional Pillars -->
+    <section class="luxury-section" style="background-color: #FFFFFF;">
+        <div class="section-container">
+            <span class="section-tag">Institutional Advantages</span>
+            <h2 class="section-title">Why Ambitious Students Partner With PACS</h2>
+            <div class="pricing-matrix" style="margin-top: 40px;">
+                <div class="matrix-card">
+                    <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; color: var(--gold-dark);">01 / Structural Zero Tuition</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Germany's premier public university model protects educational equity. We help you navigate and secure positions within these free academic ecosystems systematically.</p>
+                </div>
+                <div class="matrix-card">
+                    <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; color: var(--gold-dark);">02 / Full Anabin Auditing</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">We match your university accreditation parameters directly against Germany's strict Central Office for Foreign Education databases to guarantee absolute application validity.</p>
+                </div>
+                <div class="matrix-card">
+                    <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; color: var(--gold-dark);">03 / Clear Risk Mitigation</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">From structuring the formal €11,904 blocked asset allocation accounts safely to simulated document reviews, we remove standard human processing errors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- High-Trust Conversion FAQ Accordion Section -->
+    <section class="luxury-section">
+        <div class="section-container" style="max-width: 800px;">
+            <span class="section-tag">Direct Clarifications</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div style="margin-top: 40px; text-align: left; display: flex; flex-direction: column; gap: 15px;">
+                <div style="background: #FFFFFF; border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px;">
+                    <h4 style="font-weight: 700; margin-bottom: 8px; color: var(--text-dark);">What is the Bavarian Formula, and why is it essential?</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">It is the official mathematical equation used by German universities to convert international grading scales into the German 1.0 to 4.0 system. Knowing this score tells you exactly which universities you are qualified to apply for.</p>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px;">
+                    <h4 style="font-weight: 700; margin-bottom: 8px; color: var(--text-dark);">Are public university master and bachelor programs truly free?</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Yes. State-funded public higher education across Germany features zero tuition costs for both local and international scholars. Students pay only a nominal semester contribution fee for public transit and campus administrative upkeep.</p>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px;">
+                    <h4 style="font-weight: 700; margin-bottom: 8px; color: var(--text-dark);">What is the required blocked account amount?</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">To receive a student visa, German immigration requires proof of financial self-sufficiency through a regulated blocked account, currently configured to a secure reserve baseline of €11,904.</p>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px;">
+                    <h4 style="font-weight: 700; margin-bottom: 8px; color: var(--text-dark);">How do I start my application journey with PACS?</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Use our integrated Grade Engine card right above to convert your current score, or jump directly to our Contact Page to submit your background details and launch an immediate direct line onto our WhatsApp channel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Footer -->
+    <footer class="luxury-footer">
+        <p>&copy; 2026 PACS (Premium Academic Consultancy Services). Engineered for absolute precision.</p>
+        <p style="font-size: 0.8rem; margin-top: 8px; color: #94A3B8;">Official Inquiries: info@pacsedu.org / ali@pacsedu.org | Hotlines Powered Direct via WhatsApp Routing: +971581064039</p>
+    </footer>
+
+    <!-- Scripting for Automatic Calculation & Pre-Filled Messaging -->
+    <script>
+        const maxInput = document.getElementById('maxGrade');
+        const minInput = document.getElementById('minGrade');
+        const currInput = document.getElementById('currentGrade');
+        const gpaDisplay = document.getElementById('germanGpa');
+        const resultDesc = document.getElementById('calcResultDesc');
+        const feedback = document.getElementById('calcFeedback');
+        const whatsappBtn = document.getElementById('whatsappCalcBtn');
+
+        function calculateGermanGpa() {
+            const Nmax = parseFloat(maxInput.value);
+            const Nmin = parseFloat(minInput.value);
+            const Nd = parseFloat(currInput.value);
+
+            if (isNaN(Nmax) || isNaN(Nmin) || isNaN(Nd)) {
+                gpaDisplay.innerText = "---";
+                resultDesc.innerHTML = "";
+                feedback.innerText = "Enter your scores to activate instant routing.";
+                whatsappBtn.style.display = "none";
+                return;
+            }
+
+            if (Nd > Nmax || Nd < Nmin || Nmax <= Nmin) {
+                gpaDisplay.innerText = "Error";
+                resultDesc.innerHTML = "⚠️ Invalid Grade";
+                feedback.innerText = "Please verify your entry values.";
+                whatsappBtn.style.display = "none";
+                return;
+            }
+
+            // Authentic Bavarian Calculation: 1 + 3 * ((Nmax - Nd) / (Nmax - Nmin))
+            let score = 1 + 3 * ((Nmax - Nd) / (Nmax - Nmin));
+            let germanGrade = Math.max(1.0, Math.min(4.0, score));
+            let finalGpa = germanGrade.toFixed(2);
+
+            gpaDisplay.innerText = finalGpa;
+            feedback.innerText = `Calculated German Grade: ${finalGpa}`;
+            whatsappBtn.style.display = "inline-block";
+
+            // Official German System Labeling (German + English)
+            if (germanGrade <= 1.5) {
+                resultDesc.innerHTML = "🏆 Sehr gut / Very Good";
+            }
+            else if (germanGrade <= 2.5) {
+                resultDesc.innerHTML = "✨ Gut / Good";
+            }
+            else if (germanGrade <= 3.5) {
+                resultDesc.innerHTML = "📈 Befriedigend / Satisfactory";
+            }
+            else if (germanGrade <= 4.0) {
+                resultDesc.innerHTML = "📋 Ausreichend / Pass (Adequate)";
+            }
+            else {
+                resultDesc.innerHTML = "❌ Nicht bestanden / Fail";
+            }
+
+            // Update Dynamic Pre-Filled Intent Link
+            whatsappBtn.onclick = function() {
+                const labelText = resultDesc.innerText;
+                const textMessage = encodeURIComponent(
+                    `Hello PACS, I used your web Grade Engine. My current grade is ${Nd}/${Nmax} (Passing: ${Nmin}), which calculates to a German GPA of ${finalGpa} (${labelText}). I would like to verify my public university eligibility!`
+                );
+                window.open(`https://wa.me/971581064039?text=${textMessage}`, '_blank');
+            };
+        }
+
+        // Live calculation triggers (zero clicks required)
+        maxInput.addEventListener('input', calculateGermanGpa);
+        minInput.addEventListener('input', calculateGermanGpa);
+        currInput.addEventListener('input', calculateGermanGpa);
+    </script>
+    
+    <script src="whatsapp-widget.js"></script>
+</body>
+</html>
