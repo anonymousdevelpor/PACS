@@ -1,11 +1,11 @@
 /**
  * PACS - Premium Academic Consultancy Services
- * Dynamic Floating WhatsApp Widget
+ * Dynamic Floating WhatsApp Widget (Fully Mobile Responsive Blueprint)
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Configure your details
-    const WHATSAPP_NUMBER = "4917684128919"; // Replace with your exact WhatsApp number (no leading '+' or '00')
+    // 1. Configure your details (Updated to your official hotline)
+    const WHATSAPP_NUMBER = "971581064039"; 
     const DEFAULT_MESSAGE = encodeURIComponent(
         "Hello PACS Executive Team, I would like to schedule a personal profile review for studying in Germany."
     );
@@ -18,8 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
             bottom: 30px;
             right: 30px;
             z-index: 9999;
-            display: flex;
+            display: inline-flex;
             align-items: center;
+            justify-content: center;
             background: #128C7E;
             color: #FFFFFF;
             padding: 12px 20px;
@@ -31,12 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
             font-weight: 700;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
         }
 
         .pacs-wa-widget:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(18, 140, 126, 0.5);
             background: #075E54;
+            color: #FFFFFF;
         }
 
         .pacs-wa-icon {
@@ -44,22 +47,25 @@ document.addEventListener("DOMContentLoaded", () => {
             height: 20px;
             margin-right: 10px;
             fill: currentColor;
+            flex-shrink: 0;
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
             .pacs-wa-widget {
                 bottom: 20px;
                 right: 20px;
-                padding: 12px;
+                padding: 14px;
                 border-radius: 50%;
+                width: 54px;
+                height: 54px;
             }
             .pacs-wa-text {
-                display: none;
+                display: none !important;
             }
             .pacs-wa-icon {
                 margin-right: 0;
-                width: 24px;
-                height: 24px;
+                width: 26px;
+                height: 26px;
             }
         }
     `;
