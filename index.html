@@ -120,7 +120,7 @@
     <!-- Institutional Footer -->
     <footer class="luxury-footer">
         <p>&copy; 2026 PACS (Premium Academic Consultancy Services). Engineered for absolute precision.</p>
-        <p style="font-size: 0.8rem; margin-top: 8px; color: #94A3B8;">Official Inquiries: Info@pacsedu.org | Hotlines Powered Direct via WhatsApp Routing.</p>
+        <p style="font-size: 0.8rem; margin-top: 8px; color: #94A3B8;">Official Inquiries: info@pacsedu.org / ali@pacsedu.org | Hotlines Powered Direct via WhatsApp Routing: +971581064039</p>
     </footer>
 
     <!-- Scripting for Automatic Calculation & Pre-Filled Messaging -->
@@ -164,23 +164,20 @@
             whatsappBtn.style.display = "inline-block";
 
             // Official German System Labeling (German + English)
-            if (germanGrade >= 1.0 && germanGrade <= 1.5) {
+            if (germanGrade <= 1.5) {
                 resultDesc.innerHTML = "🏆 Sehr gut / Very Good";
-            } 
-            else if (germanGrade >= 1.6 && germanGrade <= 2.5) {
+            }
+            else if (germanGrade <= 2.5) {
                 resultDesc.innerHTML = "✨ Gut / Good";
-            } 
-            else if (germanGrade >= 2.6 && germanGrade <= 3.5) {
+            }
+            else if (germanGrade <= 3.5) {
                 resultDesc.innerHTML = "📈 Befriedigend / Satisfactory";
-            } 
-            else if (germanGrade >= 3.6 && germanGrade <= 4.0) {
+            }
+            else if (germanGrade <= 4.0) {
                 resultDesc.innerHTML = "📋 Ausreichend / Pass (Adequate)";
-            } 
-            else if (germanGrade > 4.0) {
-                resultDesc.innerHTML = "❌ Nicht bestanden / Fail";
-            } 
+            }
             else {
-                resultDesc.innerHTML = "⚠️ Invalid Grade";
+                resultDesc.innerHTML = "❌ Nicht bestanden / Fail";
             }
 
             // Update Dynamic Pre-Filled Intent Link
