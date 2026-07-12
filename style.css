@@ -9,7 +9,7 @@
     --gold: #E6A119;             /* Vibrant High-Prominence Gold Accent */
     --gold-dark: #C7860B;        /* Deep Premium Brand Gold */
     --gold-glow: rgba(230, 161, 25, 0.12);
-    --text-dark: #1E293B;        /* Sharp Slate for Maximum Typography Readability */
+    --text-dark: #1E293B;        /* Sharp Slate for Typography Readability */
     --text-muted: #64748B;       /* Secondary Muted Charcoal text */
     --border-luxury: rgba(230, 161, 25, 0.2);
     --glass-border: rgba(0, 0, 0, 0.05);
@@ -64,11 +64,11 @@ body {
     transform: scale(1.03);
 }
 
-.brand-text {
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: var(--text-dark);
+.brand-logo {
+    height: 45px;
+    width: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -99,6 +99,7 @@ body {
 
 .nav-links .nav-cta:hover {
     background: var(--gold);
+    color: #FFFFFF;
 }
 
 /* Hero & Layout Framework */
@@ -191,6 +192,7 @@ h1 {
 .btn-outline:hover {
     background: rgba(30, 41, 59, 0.05);
     transform: translateY(-2px);
+    color: var(--text-dark);
 }
 
 /* Premium Grade Engine Card */
@@ -377,6 +379,7 @@ h1 {
     font-size: 0.9rem;
     color: var(--text-muted);
     background-color: #FFFFFF;
+    line-height: 1.6;
 }
 
 /* Responsive Rules */
