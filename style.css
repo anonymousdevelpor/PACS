@@ -426,35 +426,42 @@ h1 {
     }
 }
 
-/* Beautiful Mobile Navigation Fixing Links Disappearance */
+/* Beautiful Mobile Navigation - Total One-Line Alignment */
 @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
-        padding: 12px 16px;
-        gap: 12px;
+        flex-direction: row;        /* Keeps logo and links on the same horizontal row */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 12px;
+        gap: 8px;
     }
     
     .logo-link {
-        width: 100%;
-        justify-content: center;
+        flex-shrink: 1;
+    }
+    
+    .brand-logo {
+        height: 28px;               /* Scales logo down slightly to save horizontal row room */
     }
     
     .nav-links {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 14px 18px;
+        display: flex;
+        flex-direction: row;        /* Forces all links and CTA onto one line */
+        flex-wrap: nowrap;          /* Strictly forbids wrapping onto a second line */
+        align-items: center;
+        gap: 8px;                   /* Tight spacing to ensure it fits mobile screens */
     }
     
     .nav-links a {
-        font-size: 0.85rem;
+        font-size: 0.72rem;         /* Precise sizing to keep text small enough for one line */
+        font-weight: 600;
+        white-space: nowrap;        /* Stops text like "Services & Tiers" from splitting */
     }
     
     .nav-links .nav-cta {
-        padding: 6px 16px;
-        font-size: 0.85rem;
-        width: 100%;
-        text-align: center;
-        margin-top: 4px;
+        padding: 6px 10px;          /* Compact button padding */
+        font-size: 0.72rem;
+        width: auto;
+        margin-top: 0;
     }
 }
