@@ -415,7 +415,7 @@ h1 {
 
 @media (max-width: 992px) {
     .hero {
-        padding-top: 160px; /* Adds extra padding to clear the stacked responsive menu */
+        padding-top: 160px;
     }
     .hero-content { 
         grid-template-columns: 1fr; 
@@ -429,7 +429,7 @@ h1 {
 /* Beautiful Mobile Navigation - Total One-Line Alignment */
 @media (max-width: 768px) {
     .nav-container {
-        flex-direction: row;        /* Keeps logo and links on the same horizontal row */
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 10px 12px;
@@ -441,25 +441,25 @@ h1 {
     }
     
     .brand-logo {
-        height: 28px;               /* Scales logo down slightly to save horizontal row room */
+        height: 28px;
     }
     
     .nav-links {
         display: flex;
-        flex-direction: row;        /* Forces all links and CTA onto one line */
-        flex-wrap: nowrap;          /* Strictly forbids wrapping onto a second line */
+        flex-direction: row;
+        flex-wrap: nowrap;
         align-items: center;
-        gap: 8px;                   /* Tight spacing to ensure it fits mobile screens */
+        gap: 8px;
     }
     
     .nav-links a {
-        font-size: 0.72rem;         /* Precise sizing to keep text small enough for one line */
+        font-size: 0.72rem;
         font-weight: 600;
-        white-space: nowrap;        /* Stops text like "Services & Tiers" from splitting */
+        white-space: nowrap;
     }
     
     .nav-links .nav-cta {
-        padding: 6px 10px;          /* Compact button padding */
+        padding: 6px 10px;
         font-size: 0.72rem;
         width: auto;
         margin-top: 0;
