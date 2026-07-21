@@ -12,26 +12,27 @@
         .portal-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
-            align-items: start;
+            gap: 30px;
+            align-items: stretch;
             text-align: left;
             margin-top: 40px;
         }
 
         .info-sidebar {
-            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-            color: #FFFFFF;
-            padding: 40px;
+            background: #FFFFFF;
+            color: var(--text-dark);
+            padding: 35px 30px;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border: 1px solid var(--border-luxury);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
         }
 
         .portal-form {
             background: #FFFFFF;
             border: 1px solid var(--glass-border);
-            padding: 40px;
+            padding: 35px 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
         }
 
         .form-group {
@@ -40,36 +41,38 @@
 
         .form-group label {
             display: block;
-            font-size: 0.85rem;
+            font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-dark);
-            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
         }
 
         .form-control {
             width: 100%;
-            padding: 14px 16px;
-            border: 1.5px solid #E2E8F0;
+            padding: 12px 14px;
+            background: #FAF8F5;
+            border: 1px solid rgba(0,0,0,0.08);
             border-radius: 8px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-family: 'Inter', sans-serif;
             color: var(--text-dark);
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             box-sizing: border-box;
         }
 
         .form-control:focus {
             outline: none;
             border-color: var(--gold);
+            background: #FFFFFF;
             box-shadow: 0 0 0 3px rgba(230, 161, 25, 0.15);
         }
 
         .form-grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 18px;
         }
 
         .sidebar-link {
@@ -80,14 +83,14 @@
         }
 
         .sidebar-link:hover {
-            color: #FFFFFF;
+            color: var(--gold-dark);
             text-decoration: underline;
         }
 
         @media (max-width: 992px) {
             .portal-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 30px;
             }
             .form-grid-2 {
                 grid-template-columns: 1fr;
@@ -100,14 +103,14 @@
     <!-- Premium Sticky Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo-link" style="display: flex; align-items: center;">
-                <img src="Assets/Logo.png" alt="PACS Logo" class="brand-logo" style="height: 45px; width: auto; display: block; object-fit: contain;">
+            <a href="index.html" class="logo-link">
+                <img src="Assets/Logo.png" alt="PACS Logo" class="brand-logo">
             </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services & Tiers</a>
                 <a href="about.html">About Directorate</a>
-                <a href="contact.html" class="active">Evaluate Profile</a>
+                <a href="contact.html" class="active nav-cta">Evaluate Profile</a>
             </div>
         </div>
     </nav>
@@ -120,35 +123,36 @@
             
             <div class="portal-grid">
                 
-                <!-- Left Column: Guidelines & Direct Communications -->
+                <!-- Left Column: Unified Light Info Panel -->
                 <div class="info-sidebar">
-                    <h3 style="color: var(--gold); font-size: 1.8rem; font-weight: 800; margin-bottom: 20px;">Verification Protocol</h3>
-                    <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 30px;">
+                    <span class="premium-badge">Direct Advisory Protocol</span>
+                    <h3 style="color: var(--text-dark); font-size: 1.6rem; font-weight: 800; margin-bottom: 12px;">Verification Protocol</h3>
+                    <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 25px;">
                         To maintain high admission success rates, all applicants go through a strict initial document review. This helps us ensure your profile meets German standards before we officially begin our partnership.
                     </p>
 
                     <!-- Direct Hotlines -->
-                    <div style="margin-bottom: 25px; border-bottom: 1px solid #334155; padding-bottom: 20px;">
-                        <h4 style="color: #FFFFFF; font-size: 1rem; margin-bottom: 8px;">⚡ Instant Messaging Desk</h4>
-                        <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 5px;">Connect directly via WhatsApp:</p>
-                        <a href="https://wa.me/971581064039" target="_blank" class="sidebar-link" style="font-size: 1.1rem; display: inline-flex; align-items: center; gap: 5px;">
-                            💬 +971 58 106 4039
+                    <div style="margin-bottom: 20px; border-top: 1px solid rgba(0, 0, 0, 0.06); padding-top: 18px;">
+                        <h4 style="color: var(--gold-dark); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 6px;">⚡ Instant Messaging Desk</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 4px;">Connect directly via WhatsApp:</p>
+                        <a href="https://wa.me/971581064039" target="_blank" class="sidebar-link" style="font-size: 1.05rem; font-weight: 700; color: var(--text-dark);">
+                            +971 58 106 4039
                         </a>
                     </div>
 
                     <!-- Direct Official Emails -->
-                    <div style="margin-bottom: 25px; border-bottom: 1px solid #334155; padding-bottom: 20px;">
-                        <h4 style="color: #FFFFFF; font-size: 1rem; margin-bottom: 8px;">📩 Academic Correspondence</h4>
-                        <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 5px;">Submit records directly to:</p>
-                        <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <div style="margin-bottom: 20px; border-top: 1px solid rgba(0, 0, 0, 0.06); padding-top: 18px;">
+                        <h4 style="color: var(--gold-dark); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 6px;">📩 Academic Correspondence</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 4px;">Submit records directly to:</p>
+                        <div style="display: flex; flex-direction: column; gap: 4px;">
                             <a href="mailto:info@pacsedu.org" class="sidebar-link">info@pacsedu.org</a>
                             <a href="mailto:ali@pacsedu.org" class="sidebar-link">ali@pacsedu.org</a>
                         </div>
                     </div>
 
-                    <div>
-                        <h4 style="color: #FFFFFF; font-size: 1rem; margin-bottom: 5px;">🔒 Complete Confidentiality</h4>
-                        <p style="color: #94A3B8; font-size: 0.85rem;">Your academic credentials and personal details are fully protected and processed through secure networks under the direct supervision of Founder Ali Irtaza.</p>
+                    <div style="border-top: 1px solid rgba(0, 0, 0, 0.06); padding-top: 18px;">
+                        <h4 style="color: var(--gold-dark); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 6px;">🔒 Complete Confidentiality</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5;">Your academic credentials and personal details are fully protected and processed through secure networks under the direct supervision of Founder Ali Irtaza.</p>
                     </div>
                 </div>
 
@@ -169,7 +173,7 @@
 
                         <div class="form-grid-2">
                             <div class="form-group">
-                                <label for="whatsapp">WhatsApp Number (with country code)</label>
+                                <label for="whatsapp">WhatsApp Number</label>
                                 <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="+49 123 456789" required>
                             </div>
                             <div class="form-group">
@@ -203,7 +207,7 @@
                         <!-- Formspree Honeypot Protection -->
                         <input type="text" name="_gotcha" style="display:none">
 
-                        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">
+                        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 50px; margin-top: 10px;">
                             Submit Profile for Evaluation
                         </button>
                     </form>
@@ -216,7 +220,7 @@
     <!-- Institutional Footer -->
     <footer class="luxury-footer">
         <p>&copy; 2026 PACS (Premium Academic Consultancy Services). Engineered for absolute precision.</p>
-        <p style="font-size: 0.8rem; margin-top: 8px; color: #94A3B8;">Official Inquiries: info@pacsedu.org / ali@pacsedu.org | Hotlines Powered Direct via WhatsApp Routing: +971581064039</p>
+        <p style="font-size: 0.8rem; margin-top: 8px; color: var(--text-muted);">Official Inquiries: info@pacsedu.org / ali@pacsedu.org | Hotlines Powered Direct via WhatsApp Routing: +971581064039</p>
     </footer>
 
     <!-- Smart URL Tier Auto-Selector Script -->
